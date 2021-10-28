@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+  <div class="granted_grant">Минимальный допускной балл: {{ min_points }}</div>
+</div>
+{% for participant in participants %}
+<div class="card">
+  <div class="card-body">
+    <h4>Номинант {{ loop.index }}</h4>
+    <div class="participant-info">
+      <div class="name"> <span>Имя:</span> {{ participant.name }}</div>
+      <div class="points"><span>Очки:</span> {{ participant.points }}</div>
+      {% if participant.participates %}
+      <div class="requested_grant"><span>Запрошенный грант:</span> {{ participant.requested_grant }}</div>
+      <div class="calculated_grant"><span>Вычисленный грант (без учета размера запрошенного):</span> {{ participant.calculated_grant }}</div>
+      <!-- <div class="grants_delta"><span>Избыток в расчетах:</span> {{ participant.grants_delta }}</div> -->
+      <div class="grant_without_distribution"><span>Грант без распределения избытка:</span> {{ participant.grant_without_distribution }}</div>
+      <div class="granted_grant"><span>Причисленный грант:</span> {{ participant.granted_grant }}</div>
+      {% else %}
+      <div class="granted_grant">Участник не набрал минимального допускного балла</div>
+      {% endif %}
+    </div>
+  </div>
+</div>  
+{% endfor %}
+<div class="card">
+  <div class="remainder">Остаток средств из бюджета: {{ remainder }}</div>
+</div>
+
+{% endblock %}

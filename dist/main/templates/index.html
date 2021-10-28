@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form class='get-granted-count' method='post'>
+        <div class="form-group">
+          <div class="granted-count-input-block">
+            <label for="GrantedCountInput">Введите количество претендующих на грант</label>
+            <input type="number" class="form-control" id="GrantedCountInput" name='count'>
+          </div>
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <button type="submit" class="btn btn-primary">Принять</button>
+      </form>
+    </div>
+    
+{% endblock %}

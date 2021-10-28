@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form class='get-granted-count' method='post'>
+        <div class="form-group">
+          
+          <div class="budget-input">
+            <label for="MainBudget">Общий бюджет (в тыс. рублей)</label>
+            <input type="number" class="form-control" id="MainBudget" name='budget' required>
+          </div>
+
+          <form class='get-granted-info' method='post'>
+          {% for i in range(count) %}
+            <div class="card">
+                  <div class="card-body">
+                    <h4>Номинант {{i + 1}}</h4>
+
+                    <label for="granted-info-name">Имя номинанта</label>
+                    <input type="text" class="form-control" id="granted-info-name" name='name {{i + 1}}' required>
+
+                    <label for="granted-info-points">Набранные баллы</label>
+                    <input type="number" class="form-control" id="granted-info-points" name='points {{i + 1}}' required>
+
+                    <label for="granted-info-requested-grant">Запрошенный грант (в тыс. рублей)</label>
+                    <input type="number" class="form-control" id="granted-info-requested-grant" name='requested-grant {{i + 1}}'required>
+
+                  </div>
+            </div>  
+          {% endfor %}
+          <button type="submit" class="btn btn-primary">Принять</button>
+          </form>
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+      </form>
+    </div>
+    
+{% endblock %}

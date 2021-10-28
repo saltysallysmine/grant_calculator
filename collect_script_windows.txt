@@ -1,0 +1,1 @@
+pyinstaller --add-data "static/css/base.css;static/css" --add-data "static/img/background_1.jpg;static/img" --add-data "templates/base.html;templates" --add-data "templates/calculate.html;templates" --add-data "templates/index.html;templates" --add-data "templates/results.html;templates" --add-data "grant_calculate.py;." --console main.py

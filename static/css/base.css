@@ -1,0 +1,75 @@
+body {
+  background: url("../img/background_1.jpg") 0 0/cover no-repeat fixed;
+  /* background-color: #ff15f3; */
+  
+  /* border-color: black;
+  border-style: solid; */
+
+  width: 100%;
+  height: 100%;
+}
+
+.page-header {
+  color: indigo;
+  text-decoration: underline;
+  font-size: xx-large;
+  font-weight: bold;
+
+  margin-bottom: 15px;
+}
+
+.content {
+  width: 50%;
+  margin: auto;
+  margin-top: 10%;
+
+  border-radius: 2%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  text-align: center;
+}
+.content:hover {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.granted-count-input-block{
+  width: 90%;
+  margin: auto;
+}
+
+.btn-primary {
+  width: 90%;
+}
+
+.budget-input {
+  width: 90%;
+  margin: auto;
+}
+
+.card {
+  margin: auto; 
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 90%;
+  /* margin-left: 5%; */
+}
+.card:hover {
+  background-color: rgba(180, 241, 244, 0.5);
+}
+
+.budget-input {
+  margin-bottom: 10px;
+}
+
+.granted_grant {
+  font-weight: semibold;
+  color: indigo;
+}
+
+span {
+  color: indigo;
+}
